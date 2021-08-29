@@ -27,9 +27,13 @@ const loadWeather = (data) =>{
    parent.innerHTML = ""
   
     const div  = document.createElement("div")
-    div.innerHTML = ` <h3 class = "text-center fs-1 mt-5"> ${data.main.temp}</h3>
+     const temp = data.main.temp
+     const cel = temp-273
+     const celcius = cel.toFixed(2)
+    
+    div.innerHTML = ` <h3 class = "text-center fs-2 mt-5"> ${celcius} <span class = "fs-1">C</span></h3>
     <h5 class = "text-center mt-2">${data.name} <span class= "fs-6"> (${data.sys.country})</span> </h5>
-    <P class= "text-center"> Max-temp:${data.main.temp_max}; Min-temp:${data.main.temp_min}</P>
+    <P class= "text-center">${data.weather[0].description}</P>
   `
   const error = document.getElementById("error")
 error.style.display = "none"
