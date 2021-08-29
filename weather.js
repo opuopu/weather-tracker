@@ -4,7 +4,7 @@ const city =() =>{
     const field = document.getElementById("input-field")
    fieldInt = field.value
    field.value = ""
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${field.value}&appid=eef5ff9b9b101fc3916dcf124ebee0f6`
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${field.value}&appid=eef5ff9b9b101fc3916dcf124ebee0f6`
 
 
 
