@@ -3,7 +3,7 @@
 const city =() =>{
     const field = document.getElementById("input-field")
    fieldInt = field.value
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${field.value}&appid=eef5ff9b9b101fc3916dcf124ebee0f6`
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${field.value}&appid=eef5ff9b9b101fc3916dcf124ebee0f6`
 field.value = ""
 
 
@@ -31,7 +31,7 @@ const loadWeather = (data) =>{
      const cel = temp-273
      const celcius = cel.toFixed(2)
     
-    div.innerHTML = ` <h3 class = "text-center fs-2 mt-5"> ${celcius} <span class = "fs-1">C</span></h3>
+    div.innerHTML = ` <h3 class = "text-center fs-2 mt-5"> ${celcius}<sup>o</sup> <span class = "fs-1">C</span></h3>
     <h5 class = "text-center mt-2">${data.name} <span class= "fs-6"> (${data.sys.country})</span> </h5>
     <P class= "text-center">${data.weather[0].description}</P>
   `
